@@ -7,6 +7,10 @@
   padding: 0px 40px;
   height: 80px;
 }
+.menu-icon {
+  width: 0px;
+  height: 0px;
+}
 .logo-nav {
   display: flex;
   align-items: center;
@@ -33,7 +37,7 @@
 }
 
 .option :hover {
-  color: white;
+  color: rgb(200, 212, 28);
 }
 .signin-up {
   display: flex;

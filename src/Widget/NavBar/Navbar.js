@@ -3,7 +3,7 @@ import { AiFillCloseCircle as CloseMenu } from "react-icons/ai";
 import { FiMenu as MenuIcon } from "react-icons/fi";
 import  Logo  from "../../assets/Image/logo.png";
 import "../NavBar/Navbar.css";
-
+import {NavLink} from 'react-router-dom';
  
 const Navbar=()=>{
 
@@ -24,7 +24,7 @@ const Navbar=()=>{
         </div>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">Job</a>
+           <NavLink to='/' > Job</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
             <a href="#">Companies</a>
