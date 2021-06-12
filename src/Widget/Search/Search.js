@@ -16,7 +16,8 @@ constructor(props){
         result_category:[],
         default_value:"",
         error:null,
-        isLoaded:false
+        isLoaded:false,
+        fade:false
 
     };
 
@@ -122,7 +123,7 @@ console.log(this.state.place)
 
     render(){
 
-        
+        const {fade}=this.state;
 const {error}=this.state;
 if(error){
 
@@ -134,9 +135,19 @@ else{
             <>
 
 
-    <input type="text" className='search_input' value={this.state.job_title} onChange={this.jobChange}  />
+    <input type="text"
+     className='search_input'
+      value={this.state.job_title}
+       onChange={this.jobChange}
+       placeholder="Job Title Please"
+       />
     
-    <button onClick={()=> this.MergeFunction()} > Submit</button>
+    <button onClick={()=> this.search()}
+      className='search_button'
+      onAnimationEnd={()=> this.setState({fade:false})}
+     
+
+      > Submit</button>
 <div>
 
 
@@ -147,26 +158,42 @@ else{
 {
 //search in words
 }
-{this.state.result_job_position.map(data=><div className="search_result_div">
+{this.state.result_job_position.map(data=>
+<div className="search_result_div">
  
 < Link to={{
 pathname: "/search_detail",
 state:{id:data.id}
 
+}}
+style={{ textDecoration: 'none' }}
+className='search_link'
+>
 
-}}>
-{data.id}
-    {data.job_category}
-    <br/>
-    {data.position}
+    
+    <div className='result_of_search_main'>
+<div className="result_of_search_main_part1">
+   {data.position} 
+<br/>
+{data.company_name}
+    
+</div>
+<div className="result_of_search_main_part2">
+{data.location}
+<br/>
+Posted on:{data.post_date}
+</div>
+  </div>
 </ Link>
-     </div>)}
+     </div>
+     
+     )}
 
 {
     //Select Place
 }
 
-     <select value={this.state.place}
+     {/* <select value={this.state.place}
  onChange={this.placeChange}  
  defaultValue={this.state.default_value}>
      
@@ -191,11 +218,11 @@ state:{id:data.id}
     <option value="Jitpursimara">Jitpursimara</option>
     <option value="Other">Other</option>
   
-  </select>  
+  </select>   */}
 </div>
 </div>
       
-{this.state.result_place.map(data=><div className="search_result_div">
+{/* {this.state.result_place.map(data=><div className="search_result_div">
  
 
 {data.id}
@@ -203,7 +230,7 @@ state:{id:data.id}
     <br/>
     {data.position}
 
-     </div>)}
+     </div>)} */}
     
 </>
 
