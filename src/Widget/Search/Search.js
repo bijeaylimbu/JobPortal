@@ -160,6 +160,7 @@ else{
 }
 {this.state.result_job_position.map(data=>
 <div className="search_result_div">
+    
  
 < Link to={{
 pathname: "/search_detail",
@@ -185,7 +186,9 @@ Posted on:{data.post_date}
 </div>
   </div>
 </ Link>
+
      </div>
+   
      
      )}
 
@@ -219,6 +222,8 @@ Posted on:{data.post_date}
     <option value="Other">Other</option>
   
   </select>   */}
+
+ 
 </div>
 </div>
       

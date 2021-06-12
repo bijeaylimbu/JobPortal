@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../Search/Search.css";
+import "../Detail/SearchDetail.css";
 class SearchDetail extends Component{
 
     constructor(props){
@@ -17,9 +17,12 @@ class SearchDetail extends Component{
 
    let id=this.props.location.state.id;
     fetch(`http://127.0.0.1:8000/jobs/all_jobs/${id}/`)
+    
     .then(res=> res.json())
+    
     .then(
         (result)=>{
+            
             this.setState({
                 detail:result
             })
@@ -49,16 +52,20 @@ else
         return (
 
 
-            <div>
+            <div className='job_detail_main'>
+<div className='detail_companay_name_div'>
+    <div className='company_name_div'>
+ {detail.company_name}
+</div>
+</div>
 
-
-
+<div className='other_information'>
  {detail.id}
  <br/>
 
  {detail.job_category}
 
-
+</div>
  </div>
           
         );
