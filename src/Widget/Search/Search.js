@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../Search/Search.css"
 import {Link} from "react-router-dom";
+import WorkingPicture from "../../assets/Image/working_picture.png"
 class Search extends Component{
 
 constructor(props){
@@ -133,8 +134,11 @@ else{
 
         return (
             <>
+<div className="search_main"> 
 
+<img src={WorkingPicture} className="working_image"/>
 
+<div className="search_bar"> 
     <input type="text"
      className='search_input'
       value={this.state.job_title}
@@ -148,6 +152,8 @@ else{
      
 
       > Submit</button>
+      </div>
+      </div>
 <div>
 
 

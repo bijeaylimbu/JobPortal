@@ -12,6 +12,7 @@ height: 40px;
     padding-bottom: 10px;
  
    display: block;
+   overflow: hidden;
 }
 
 
@@ -74,10 +75,36 @@ height: 40px;
 
     width: 50%;
     float: left;
+    overflow: hidden;
 }
 
 .result_of_search_main_part2{
 
     width: 40%;
     float: left;
+    overflow: hidden;
+}
+
+.search_main{
+
+    background-color: rgb(223, 91, 14);
+    height: 70px;
+   padding-top: 20px;
+    
+}
+
+.working_image{
+float: left;
+   
+    height: 70px;
+}
+
+.search_logo{
+    width: 20%;
+    float: left;
+}
+.search_bar{
+
+    width: 60%;
+
 }

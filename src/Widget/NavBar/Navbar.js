@@ -18,17 +18,15 @@ const Navbar=()=>{
 <div className="header">
       <div className="logo-nav">
         <div className="logo-container">
-          <a href="#">
+       
            <img src={Logo} className="logo"/>
-          </a>
+         
         </div>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className="option" onClick={closeMobileMenu}>
-           <NavLink to='/' > Job</NavLink>
+           <NavLink to='/'  style={{ textDecoration: 'none' }}> Job</NavLink>
           </li>
-          <li className="option" onClick={closeMobileMenu}>
-            <a href="#">Companies</a>
-          </li>
+          
           <li className="option" onClick={closeMobileMenu}>
             <a href="#">BLOG</a>
           </li>

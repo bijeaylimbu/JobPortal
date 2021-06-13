@@ -68,7 +68,7 @@ else {
 
 
 </div>
-
+<center><h2>All Jobs</h2></center>
 <div className="all_jobs">
 
 
