@@ -14,7 +14,9 @@ constructor(props){
     }
 
 }
-
+saveSEssion(){
+    
+}
 
 componentDidMount(){
 
@@ -79,7 +81,9 @@ else {
 JobsList.map(jobs=>(
 < Link to={{
 pathname: "/search_detail",
-state:{id:jobs.id}
+state:{id:jobs.id,
+store: sessionStorage.setItem('related_jobs',jobs.job_category)
+}
 
 }}
 style={{ textDecoration: 'none' }}

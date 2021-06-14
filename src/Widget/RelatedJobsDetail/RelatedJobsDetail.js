@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import "../Detail/SearchDetail.css";
+import "./RelatedJobsDetail.css";
 import { BiBuildingHouse } from "react-icons/bi";
-import RelatedJobs from '../RelatedJobs/RelatedJobs';
 
 
-class SearchDetail extends Component{
+
+class RelatedJobsDetail extends Component{
 
     constructor(props){
 
@@ -79,7 +79,7 @@ else
 </div>
 
 <div className='other_information'>
-    <div   className="other_info">
+    <div   className="">
 <ul className="general_info">
 <h2>{detail.position}</h2>
 <br/>
@@ -128,12 +128,7 @@ If you are interested for this post please send your updated resume/CV on {detai
 
 
 </div>
-<h3>Jobs Yoy May be Interested</h3>
-<div className="part2">
-   
 
-<RelatedJobs job_category={detail.job_category}/>
-</div>
 </div>
  </div>
           
@@ -142,4 +137,4 @@ If you are interested for this post please send your updated resume/CV on {detai
     }
 }
 
-export default SearchDetail;
+export default RelatedJobsDetail;

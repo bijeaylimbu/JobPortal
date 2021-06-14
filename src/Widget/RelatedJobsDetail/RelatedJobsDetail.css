@@ -105,13 +105,7 @@ width: 30%;
 
 }
 
-.company_name_div_info{
 
-    float: left;
-    width: 60%;
-
-
-}
 .react_icon{
 
     width: 100px;
@@ -129,19 +123,4 @@ width: 30%;
 }
 
 
-.other_info{
 
-    width: 60%;
-    float: left;
-}
-
-.part2{
-
-    width: 30%;
-   
-    float: left;
-    border: 2px solid black;
-    height: 750px;
-    overflow: hidden;
-    border-radius: 25px;
-}
