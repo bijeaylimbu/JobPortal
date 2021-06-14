@@ -78,6 +78,7 @@ overflow: hidden;
 }
 
 
+
 .what_we_offer{
 
     border: 2px sold black;
@@ -87,7 +88,10 @@ overflow: hidden;
     border: 1px solid black;
     border-radius: 15px;
     padding: 10px;
+   
 }
+
+
 
 
 .contact{
@@ -112,4 +116,30 @@ width: 30%;
 
     width: 100px;
     height: 45px;
+}
+
+.general_info{
+    list-style-type: "-->";
+
+}
+
+.general_info li{
+
+    padding-left: 10px;
+}
+
+
+.other_info{
+
+    width: 60%;
+    float: left;
+}
+
+.part2{
+
+    width: 30%;
+   
+    float: left;
+    border: 2px solid black;
+    height: 800px;
 }

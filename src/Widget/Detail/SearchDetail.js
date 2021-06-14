@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import "../Detail/SearchDetail.css";
 import { BiBuildingHouse } from "react-icons/bi";
+import RelatedJobs from '../RelatedJobs/RelatedJobs';
+
+
 class SearchDetail extends Component{
 
     constructor(props){
@@ -8,7 +11,9 @@ class SearchDetail extends Component{
         super(props);
         this.state={
             error: null,
-            detail:[]
+            detail:[],
+
+            related_job:[]
         }
     }
  
@@ -25,8 +30,11 @@ class SearchDetail extends Component{
         (result)=>{
             
             this.setState({
-                detail:result
+                detail:result,
+                
+                
             })
+            sessionStorage.setItem('related_jobs',result.job_category)
         },
         (error) => {
             this.setState({
@@ -36,6 +44,7 @@ class SearchDetail extends Component{
           }
     
     )
+    
    
     
   }
@@ -54,6 +63,7 @@ else
 
 
             <div className='job_detail_main'>
+
 <div className='detail_companay_name_div'>
     <div className='company_name_div'>
         <div className="company_name_logo">
@@ -69,13 +79,27 @@ else
 </div>
 
 <div className='other_information'>
-
+    <div   className="other_info">
+<ul className="general_info">
 <h2>{detail.position}</h2>
 <br/>
-<b>Job Posted on: </b>{detail.post_date}
-<br/>
- <b>Experience:</b> {detail.experience}
+<b>Job Posted on: </b> <li> {detail.post_date}</li>
+<br/> 
+ <b>Experience:</b><li>{detail.experience}</li>
+ <br/> 
+ <b>Job Type:</b><li> {detail.job_type}</li>
+ 
  <br/>
+ <b>Salary:</b><li> {detail.salary}</li>
+ <br/> 
+ <b>Position Type:</b> <li>{detail.position_type}</li>
+ <br/>
+ <br/>
+ <b>Number of Vacancy/s:</b> <li>{detail.number_of_vacancy}</li>
+ <br/>
+
+ <b>Education:</b> <li> {detail.education} </li>
+ </ul>
  <div className="job_description">
    <h3> Job Description</h3>
     
@@ -91,11 +115,11 @@ else
 
     {detail.skill}
 </div>
-<b>Education:</b>   {detail.education} 
-<div className="what_we_offer">
 
+<div className="what_we_offer">
+<h3> What We Offer:</h3>
     {detail.what_we_offer}
-    <h3> What We Offer:</h3>
+  
 </div>
 <div className="contact"> 
 If you are interested for this post please send your updated resume/CV on {detail.email} before {detail.before_date}
@@ -103,7 +127,11 @@ If you are interested for this post please send your updated resume/CV on {detai
 <br/>
 
 
+</div>
+<div className="part2">
 
+<RelatedJobs job_category={detail.job_category}/>
+</div>
 </div>
  </div>
           

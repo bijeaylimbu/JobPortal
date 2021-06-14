@@ -24,33 +24,47 @@ const Navbar=()=>{
         </div>
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className="option" onClick={closeMobileMenu}>
-           <NavLink to='/'  style={{ textDecoration: 'none' }}> Job</NavLink>
+           <NavLink to='/' 
+            style={{ textDecoration: 'none' }}
+            > Job</NavLink>
           </li>
           
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">BLOG</a>
+          <NavLink to='/' 
+            style={{ textDecoration: 'none' }}
+            > Blog</NavLink>
           </li>
           <li className="option" onClick={closeMobileMenu}>
-            <a href="#">About</a>
+          <NavLink to='/' 
+            style={{ textDecoration: 'none' }}
+            > About</NavLink>
           </li>
           <li className="option mobile-option" onClick={closeMobileMenu}>
-            <a href="#">SIGN-IN</a>
+          <NavLink to='/' 
+          className="sign-in"
+            style={{ textDecoration: 'none' }}
+            > Sign In</NavLink>
           </li>
           <li className="option mobile-option" onClick={closeMobileMenu}>
-            <a href="" className="sign-up">
-              SIGN-UP
-            </a>
+          <NavLink to='/' 
+           className="signup-btn"
+            style={{ textDecoration: 'none' }}
+            > Sign-Up</NavLink>
           </li>
         </ul>
       </div>
       <ul className="signin-up">
         <li className="sign-in" onClick={closeMobileMenu}>
-          <a href="#">SIGN-IN</a>
+        <NavLink to='/' 
+          className="sign-in"
+            style={{ textDecoration: 'none' }}
+            > Sign In</NavLink>
         </li>
         <li onClick={closeMobileMenu}>
-          <a href="" className="signup-btn">
-            SIGN-UP
-          </a>
+        <NavLink to='/' 
+           className="signup-btn"
+            style={{ textDecoration: 'none' }}
+            > Sign-Up</NavLink>
         </li>
       </ul>
       <div className="mobile-menu" onClick={handleClick}>
