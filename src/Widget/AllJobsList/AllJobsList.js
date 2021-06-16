@@ -10,6 +10,7 @@ constructor(props){
         error:null,
         isLoading:false,
         JobsList:[],
+        days_lfe:''
       
     }
 
@@ -79,6 +80,8 @@ else {
 
 
 JobsList.map(jobs=>(
+
+  
 < Link to={{
 pathname: "/search_detail",
 state:{id:jobs.id,
@@ -89,13 +92,17 @@ store: sessionStorage.setItem('related_jobs',jobs.job_category)
 style={{ textDecoration: 'none' }}
 className='search_link'
 >
+
+  
+
+
     <div className='jobs' key={jobs.id}>
        
       <h2 className='job_position'>  {jobs.position}</h2>
 <br/>
 <h3 className='company_name'>{jobs.company_name}</h3>
 <h3 className='location'>{jobs.location}</h3>
-Apply Before:{jobs.before_date}
+Apply Before:{jobs.before_date} ({jobs.days_left} days left)
         </div>
 </ Link>
 
