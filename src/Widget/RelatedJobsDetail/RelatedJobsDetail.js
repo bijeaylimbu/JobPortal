@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./RelatedJobsDetail.css";
 import { BiBuildingHouse } from "react-icons/bi";
+import SendToGmail from '../ButtonGmail/ButtonGmail';
 
 
 
@@ -122,7 +123,8 @@ else
   
 </div>
 <div className="contact"> 
-If you are interested for this post please send your updated resume/CV on {detail.email} before {detail.before_date}
+If you are interested for this post please send your updated resume/CV on {detail.email}  before {detail.before_date}
+
 </div>
 <br/>
 

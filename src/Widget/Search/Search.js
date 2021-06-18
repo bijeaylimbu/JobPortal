@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../Search/Search.css"
 import {Link} from "react-router-dom";
 import WorkingPicture from "../../assets/Image/working_picture.png"
+import xtype from "xtypejs"
 class Search extends Component{
 
 constructor(props){
@@ -52,29 +53,43 @@ categoryChange(event){
 search(){
 
     let{job_title}=this.state;
-    const url_title=`http://127.0.0.1:8000/jobs/all_jobs/?search=${job_title}`;
+    console.log(xtype(this.state.job_title))
+    if ((this.state.job_title.trim().length!=0) ||(this.state.job_title.trim()!="")){
+
+
+        // window.open("/advance_search")
+        const url_title=`http://127.0.0.1:8000/jobs/all_jobs/?search=${job_title}`;
    
 
-     fetch(url_title, {
+        fetch(url_title, {
+   
+           method:'GET'
+        }).then(response=> response.json())
+        .then(json=> {
+            this.setState({result_job_position:json});
+            console.log(json);
+   
+            
+   
+        },
+        (error)=> {
+   
+           this.setState({
+   
+               error
+           })
+        }
+   
+        )
 
-        method:'GET'
-     }).then(response=> response.json())
-     .then(json=> {
-         this.setState({result_job_position:json});
-         console.log(json);
-
-         
-
-     },
-     (error)=> {
-
-        this.setState({
-
-            error
-        })
-     }
-)
-     
+        
+    }
+    else {
+        window.location="/advance_search"
+    }
+ 
+  
+    
 
 
 }
