@@ -81,7 +81,10 @@ else {
 
 JobsList.map(jobs=>(
 
-  
+
+
+
+
 < Link to={{
 pathname: "/search_detail",
 state:{id:jobs.id,
@@ -93,17 +96,20 @@ style={{ textDecoration: 'none' }}
 className='search_link'
 >
 
-  
-
-
-    <div className='jobs' key={jobs.id}>
+        <div className='jobs' key={jobs.id}>
        
-      <h2 className='job_position'>  {jobs.position}</h2>
-<br/>
-<h3 className='company_name'>{jobs.company_name}</h3>
-<h3 className='location'>{jobs.location}</h3>
-Apply Before:{jobs.before_date} ({jobs.days_left} days left)
-        </div>
+        <h2 className='job_position'>  {jobs.position}</h2>
+  <br/>
+  <h3 className='company_name'>{jobs.company_name}</h3>
+  <h3 className='location'>{jobs.location}</h3>
+  Apply Before:{jobs.before_date} ({jobs.days_left} days left)
+          </div>
+      
+
+
+
+
+
 </ Link>
 
 )
