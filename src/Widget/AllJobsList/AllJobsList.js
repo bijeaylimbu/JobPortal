@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import "../AllJobsList/AllJobsList.css";
 import {Link} from 'react-router-dom';
+import axios from 'axios';
+import moment from "moment";
+
 class AllJobsList extends Component{
 constructor(props){
 
@@ -15,8 +18,13 @@ constructor(props){
     }
 
 }
-saveSEssion(){
-    
+deleteJob(id){
+axios.delete(`http://127.0.0.1:8000/jobs/job_delete/${id}/`)
+    .then(()=>{
+
+        
+    })
+   
 }
 
 componentDidMount(){
@@ -83,8 +91,6 @@ JobsList.map(jobs=>(
 
 
 
-
-
 < Link to={{
 pathname: "/search_detail",
 state:{id:jobs.id,
@@ -96,14 +102,29 @@ style={{ textDecoration: 'none' }}
 className='search_link'
 >
 
-        <div className='jobs' key={jobs.id}>
+
+
+     {jobs.days_left>0 ?
+     <div className='jobs' key={jobs.id}>
        
-        <h2 className='job_position'>  {jobs.position}</h2>
-  <br/>
-  <h3 className='company_name'>{jobs.company_name}</h3>
-  <h3 className='location'>{jobs.location}</h3>
-  Apply Before:{jobs.before_date} ({jobs.days_left} days left)
-          </div>
+     <h2 className='job_position'>  {jobs.position}</h2>
+<br/>
+<h3 className='company_name'>{jobs.company_name}</h3>
+<h3 className='location'>{jobs.location}</h3>
+
+
+Apply Before:{jobs.before_date} 
+
+       </div> 
+   :
+   
+  null
+    } 
+
+
+  
+
+      
       
 
 
