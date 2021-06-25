@@ -1,0 +1,147 @@
+.job_detail_main{
+
+    width: 80%;
+    margin-left: 5%;
+   
+}
+
+.detail_companay_name_div{
+
+    height: 300px;
+    background-color: rgb(184, 182, 76);
+    
+}
+
+.detail_company_name{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20%;
+  
+    border: 2px  solid blue;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+  margin-top: 0px;
+    
+    
+}
+
+.company_name_div{
+width: 50%;
+height: 50px;
+   border: 2px solid rgb(0, 140, 255);
+   margin-top: 100px;
+   margin-left: 20%;
+   display: inline-block;
+   text-align: center;
+   padding-top: 20px;
+   font-size: 20px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   border-radius: 25px;
+overflow: hidden;
+
+
+}
+
+.job_description{
+
+    border: 2px sold black;
+    margin:20px;
+    white-space: pre-line;
+    font-family: Chalkduster, fantasy;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+
+.responsiblities{
+
+    border: 2px sold black;
+    margin:20px;
+    white-space: pre-line;
+    font-family: Chalkduster, fantasy;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.skill{
+
+    border: 2px sold black;
+    margin:20px;
+    white-space: pre-line;
+    font-family: Chalkduster, fantasy;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+
+.what_we_offer{
+
+    border: 2px sold black;
+    margin:20px;
+    white-space: pre-line;
+    font-family: Chalkduster, fantasy;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+   
+}
+
+
+
+
+.contact{
+
+    margin-bottom: 60px;
+}
+.company_name_logo{
+
+float: left;
+width: 30%;
+
+}
+
+.company_name_div_info{
+
+    float: left;
+    width: 60%;
+
+
+}
+.react_icon{
+
+    width: 100px;
+    height: 45px;
+}
+
+.general_info{
+    list-style-type: "-->";
+
+}
+
+.general_info li{
+
+    padding-left: 10px;
+}
+
+
+.other_info{
+
+    width: 60%;
+    float: left;
+}
+
+.part2{
+
+    width: 30%;
+   
+    float: left;
+    border: 2px solid black;
+    height: 750px;
+    overflow: hidden;
+    border-radius: 25px;
+}
